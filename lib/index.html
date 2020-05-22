@@ -1,29 +1,83 @@
 <div class="container-fluid" id="app">
-    <div class="row header-nav">
-        <div class="col-md-8"></div>
-        <div class="col-md-1" v-on:click="renderHome">Home</div>
-        <div class="col-md-1" v-on:click="renderMusic">Music</div>
-        <div class="col-md-1" v-on:click="renderArt">Art</div>
-        <div class="col-md-1" v-on:click="renderDance">Dance</div>
-    </div>
-    <div class="row homePage pageContent" v-if="renderingHome">
-        <div>
-            put home page content here
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        Inga Aleckson
+                    </div>
+                </div>
+            </div>
+            <div class="row content-nav">
+                <div class="col-md-1 contentTab" v-on:click="renderAbout">
+                    <div class="row">About</div>
+                </div>
+                <div class="col-md-1 contentTab" v-on:click="renderMusic">
+                    <div class="row">Music</div>
+                </div>
+                <div class="col-md-1 contentTab" v-on:click="renderArt">
+                    <div class="row">Traditional Art</div>
+                </div>
+                <div class="col-md-1 contentTab" v-on:click="renderBodyArt">
+                    <div class="row">Body Art</div>
+                </div>
+                <div class="col-md-1 contentTab" v-on:click="renderDance">
+                    <div class="row">Dance</div>
+                </div>
+            </div>
+            <div class="row contentCanvas">
+                <div class="aboutPage pageContent" v-if="renderingAbout">
+                    <div>
+                        put about content here
+                    </div>
+                </div>
+                <div class="musicPage pageContent" v-if="renderingMusic">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div>
+                                Singles
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div>
+                                Soul Sherpa
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <diva class="row">
+                            <div>
+                                Fuitmouse
+                            </div>
+                        </diva>
+                    </div>
+                </div>
+                <div class="artPage pageContent" v-if="renderingArt">
+                    <div>
+                        put artist page here
+                    </div>
+                </div>
+                <div class="bodyArtPage pageContent" v-if="renderingBodyArt">
+                    <div>
+                        put body art page here
+                    </div>
+                </div>
+                <div class="dancePage pageContent" v-if="renderingDance">
+                    <div>
+                        put dancing page here
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row musicPage pageContent" v-if="renderingMusic">
-        <div>
-            put music page content here 
-        </div>
-    </div>
-    <div class="row artPage pageContent" v-if="renderingArt">
-        <div>
-            put artist page here
-        </div>
-    </div>
-    <div class="row dancePage pageContent" v-if="renderingDance">
-        <div>
-            put dancing page here
+        <div class="col-md-4">
+            <div class="row">
+                <div class="sideImage">
+                    <img src="../img/profileShot.jpeg">
+                </div>
+            </div>
         </div>
     </div>
     <div class="row media-nav">
@@ -40,7 +94,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/ingaProfile.css">
 
-<script src="../js/vue.js"></script>
+<!--script src="../js/vue.js"></script-->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="../js/ingaProfile.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
