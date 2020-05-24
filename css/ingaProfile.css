@@ -1,0 +1,41 @@
+.baseBackground {
+    background-color: #715CA8;
+    color: white;
+}
+
+/*.backgroundHue {*/
+/*    background-color: #416EB6;*/
+/*    opacity: 0.4;*/
+/*}*/
+
+.content-nav {
+    height: 5%;
+    text-align: center;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+}
+
+.contentTab {
+    text-align: center;
+}
+
+.contentCanvas {
+    height: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.pageContent {
+    margin: 10px;
+    max-height: 100%;
+}
+
+/*carousel css*/
+.carouselImage img {
+    max-height: 100%;
+}
+
+.carouselContainer {
+    max-height: 100%;
+}

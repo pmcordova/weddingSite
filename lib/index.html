@@ -1,93 +1,90 @@
-<div class="container-fluid" id="app">
-    <div class="row">
-        <div class="col-md-8">
+<div class="baseBackground">
+    <div class="container-fluid backgroundHue siteContent" style="height:100%; width:100%;" id="app">
+        <div class="siteContent" style="max-height: 100%">
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-8">
+                <div class="col-md-8" style="height:100%;">
+                    <div class="row contentCanvas">
+                        <div class="aboutPage pageContent" v-if="renderingAbout">
+                            <div>
+                                put about content here
+                            </div>
+                        </div>
+                        <div class="musicPage pageContent" v-if="renderingMusic">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div>
+                                        Singles
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div>
+                                        Soul Sherpa
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <diva class="row">
+                                    <div>
+                                        Fuitmouse
+                                    </div>
+                                </diva>
+                            </div>
+                        </div>
+                        <div class="artPage pageContent" v-if="renderingArt">
+                            <div class="carouselContainer">
+                                <div class="carouselImage">
+                                    <img v-bind:src="bodyArtImages[selectedItemIndex]">
+                                </div>
+                                <div class="carouselNav">
+                                    <span class="carouselLeft" v-on:dblclick="previousImage"></span>
+                                    <span class="carouselRight" v-on:dblclick="nextImage"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dancePage pageContent" v-if="renderingDance">
+                            <div>
+                                put dancing page here
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row content-nav">
+                        <div class="col-md-1 contentTab" v-on:click="renderAbout">
+                            <div class="row">About</div>
+                        </div>
+                        <div class="col-md-1 contentTab" v-on:click="renderMusic">
+                            <div class="row">Music</div>
+                        </div>
+                        <div class="col-md-4 siteTitle">
+                            <div class="row">Inga Aleckson</div>
+                        </div>
+                        <div class="col-md-1 contentTab" v-on:click="renderArt">
+                            <div class="row">Art</div>
+                        </div>
+                        <div class="col-md-1 contentTab" v-on:click="renderDance">
+                            <div class="row">Dance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
                     <div class="row">
-                        Inga Aleckson
-                    </div>
-                </div>
-            </div>
-            <div class="row content-nav">
-                <div class="col-md-1 contentTab" v-on:click="renderAbout">
-                    <div class="row">About</div>
-                </div>
-                <div class="col-md-1 contentTab" v-on:click="renderMusic">
-                    <div class="row">Music</div>
-                </div>
-                <div class="col-md-1 contentTab" v-on:click="renderArt">
-                    <div class="row">Traditional Art</div>
-                </div>
-                <div class="col-md-1 contentTab" v-on:click="renderBodyArt">
-                    <div class="row">Body Art</div>
-                </div>
-                <div class="col-md-1 contentTab" v-on:click="renderDance">
-                    <div class="row">Dance</div>
-                </div>
-            </div>
-            <div class="row contentCanvas">
-                <div class="aboutPage pageContent" v-if="renderingAbout">
-                    <div>
-                        put about content here
-                    </div>
-                </div>
-                <div class="musicPage pageContent" v-if="renderingMusic">
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div>
-                                Singles
-                            </div>
+                        <div class="sideImage" style="position:relative;">
+                            <img src="../img/profileShot.jpeg" style="width: 100%; height: 100%">
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div>
-                                Soul Sherpa
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <diva class="row">
-                            <div>
-                                Fuitmouse
-                            </div>
-                        </diva>
-                    </div>
-                </div>
-                <div class="artPage pageContent" v-if="renderingArt">
-                    <div>
-                        put artist page here
-                    </div>
-                </div>
-                <div class="bodyArtPage pageContent" v-if="renderingBodyArt">
-                    <div>
-                        put body art page here
-                    </div>
-                </div>
-                <div class="dancePage pageContent" v-if="renderingDance">
-                    <div>
-                        put dancing page here
+                        <!--div class="row media-nav" style="z-index:10; background-color:black; color:white; opacity:.5; position:absolute">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-2">instagram icon</div>
+                            <div class="col-md-2">twitter icon</div>
+                            <div class="col-md-2">facebook icon</div>
+                            <div class="col-md-2">spotify icon</div>
+                            <div class="col-md-2">youtube icon</div>
+                            <div class="col-md-1"></div>
+                        </div-->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="row">
-                <div class="sideImage">
-                    <img src="../img/profileShot.jpeg">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row media-nav">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">instagram icon</div>
-        <div class="col-md-2">twitter icon</div>
-        <div class="col-md-2">facebook icon</div>
-        <div class="col-md-2">spotify icon</div>
-        <div class="col-md-2">youtube icon</div>
-        <div class="col-md-1"></div>
     </div>
 </div>
 
