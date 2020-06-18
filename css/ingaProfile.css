@@ -1,5 +1,6 @@
 .baseBackground {
-    background-color: #715CA8;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
     color: white;
 }
 
@@ -28,14 +29,31 @@
 
 .pageContent {
     margin: 10px;
-    max-height: 100%;
+    height: 95%;
+}
+
+.noMarginRow {
+    margin-right:0;
+    margin-left:0;
 }
 
 /*carousel css*/
-.carouselImage img {
-    max-height: 100%;
+.carouselImage {
+    height: 90%;
 }
 
 .carouselContainer {
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselCol {
+    padding:0;
+}
+
+.carouselBtn {
+    background-color: black;
 }

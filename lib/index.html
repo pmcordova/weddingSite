@@ -25,21 +25,23 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <diva class="row">
+                                <div class="row">
                                     <div>
                                         Fuitmouse
                                     </div>
-                                </diva>
+                                </div>
                             </div>
                         </div>
                         <div class="artPage pageContent" v-if="renderingArt">
-                            <div class="carouselContainer">
-                                <div class="carouselImage">
-                                    <img v-bind:src="bodyArtImages[selectedItemIndex]">
+                            <div class="carouselContainer row">
+                                <div class="col-md-1 carouselCol">
+                                    <button class="btn carouselNav carouselBtn" v-on:click="previousImage"><span class="glyphicon glyphicon-chevron-left"></span></button>
                                 </div>
-                                <div class="carouselNav">
-                                    <span class="carouselLeft" v-on:dblclick="previousImage"></span>
-                                    <span class="carouselRight" v-on:dblclick="nextImage"></span>
+                                <div class="col-md-10 carouselCol">
+                                    <img v-bind:src="bodyArtImages[selectedBodyArtIndex]" style="height: 100%; max-width: 100%;">
+                                </div>
+                                <div class="col-md-1 carouselCol">
+                                    <button class="btn carouselNav carouselBtn" v-on:click="nextImage"><span class="glyphicon glyphicon-chevron-right"></span></button>
                                 </div>
                             </div>
                         </div>

@@ -32,9 +32,7 @@ new Vue({
         ],
         //carouselJS
         imageCarousel: true,
-        selectedItemIndex: 0,
-        //TODO: see if this method works
-        //selectedItem: this.bodyArtImages[this.selectedItemIndex]
+        selectedBodyArtIndex: 0
     },
     methods: {
         renderAbout: function () {
@@ -63,10 +61,10 @@ new Vue({
         },
         //carousel JS
         nextImage: function() {
-            this.selectedItemIndex = Math.min(this.selectedItemIndex + 1, this.bodyArtImages - 1)
+            this.selectedBodyArtIndex = Math.min(this.selectedBodyArtIndex + 1, this.bodyArtImages.length - 1);
         },
         previousImage: function() {
-            this.selectedItemIndex = Math.max(0, this.selectedItemIndex - 1)
+            this.selectedBodyArtIndex = Math.max(0, this.selectedBodyArtIndex - 1);
         }
     }
 })
