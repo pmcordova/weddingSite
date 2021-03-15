@@ -10,37 +10,46 @@
                             </div>
                         </div>
                         <div class="musicPage pageContent" v-if="renderingMusic">
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div>
+                            <div class="col-md-4 musicCol">
+                                <div class="row noMarginRow">
+                                    <div class="widget singlesFollow">
                                         Singles
                                     </div>
                                 </div>
+                                <div class="row noMarginRow">
+                                    <div class="widget singlesPlay"></div>
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div>
+                            <div class="col-md-4 musicCol">
+                                <div class="row noMarginRow">
+                                    <div class="widget soulSherpaFollow">
                                         Soul Sherpa
                                     </div>
                                 </div>
+                                <div class="row noMarginRow">
+                                    <div class="widget soulSherpaPlay"></div>
+                                </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <div>
-                                        Fuitmouse
+                            <div class="col-md-4 musicCol">
+                                <div class="row noMarginRow">
+                                    <div class="widget fruitmouseFollow">
+                                        Fruitmouse
+                                    </div>
+                                    <div class="row noMarginRow">
+                                        <div class="widget fruitmousePlay"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="artPage pageContent" v-if="renderingArt">
                             <div class="carouselContainer row">
-                                <div class="col-md-1 carouselCol">
+                                <div class="col-md-1">
                                     <button class="btn carouselNav carouselBtn" v-on:click="previousImage"><span class="glyphicon glyphicon-chevron-left"></span></button>
                                 </div>
-                                <div class="col-md-10 carouselCol">
+                                <div class="col-md-10">
                                     <img v-bind:src="bodyArtImages[selectedBodyArtIndex]" style="height: 100%; max-width: 100%;">
                                 </div>
-                                <div class="col-md-1 carouselCol">
+                                <div class="col-md-1">
                                     <button class="btn carouselNav carouselBtn" v-on:click="nextImage"><span class="glyphicon glyphicon-chevron-right"></span></button>
                                 </div>
                             </div>
@@ -67,22 +76,6 @@
                         <div class="col-md-1 contentTab" v-on:click="renderDance">
                             <div class="row">Dance</div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="sideImage" style="position:relative;">
-                            <img src="../img/profileShot.jpeg" style="width: 100%; height: 100%">
-                        </div>
-                        <!--div class="row media-nav" style="z-index:10; background-color:black; color:white; opacity:.5; position:absolute">
-                            <div class="col-md-1"></div>
-                            <div class="col-md-2">instagram icon</div>
-                            <div class="col-md-2">twitter icon</div>
-                            <div class="col-md-2">facebook icon</div>
-                            <div class="col-md-2">spotify icon</div>
-                            <div class="col-md-2">youtube icon</div>
-                            <div class="col-md-1"></div>
-                        </div-->
                     </div>
                 </div>
             </div>
