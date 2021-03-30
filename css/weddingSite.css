@@ -1,5 +1,5 @@
 .baseBackground {
-    background-image: url(../img/home_background.JPG);
+    background-image: url(../img/home_background.png);
     background-size: cover;
     color: white;
 }
@@ -16,7 +16,9 @@
     vertical-align: bottom;
     justify-content: center;
     align-items: flex-end;
-    width: 100%;
+    width: 100%;    
+    background-color:rgba(0,0,0,0.4);
+    color: white;
 }
 
 .contentTab {
