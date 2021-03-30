@@ -1,5 +1,5 @@
 .baseBackground {
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/home_background.JPG);
     background-size: cover;
     color: white;
 }
@@ -10,12 +10,13 @@
 /*}*/
 
 .content-nav {
-    height: 10%;
+    height: 5%;
     display: flex;
     text-align: center;
     vertical-align: bottom;
     justify-content: center;
     align-items: flex-end;
+    width: 100%;
 }
 
 .contentTab {

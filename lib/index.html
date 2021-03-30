@@ -1,93 +1,26 @@
 <div class="baseBackground">
     <div class="container-fluid backgroundHue siteContent" style="height:100%; width:100%;" id="app">
-        <div class="siteContent" style="max-height: 100%">
+        <div class="row noMarginRow content-nav" style="max-height: 15%">
+            <div class="col" style="width:15%">Philip and Jessica</div>
+            <div class="col" style="width:35%"></div>
+            <div class="col" style="width:10%">Ceremony</div>
+            <div class="col" style="width:10%">Reception</div>
+            <div class="col" style="width:10%">Registry</div>
+            <div class="col" style="width:10%">RSVP</div>
+        </div>
+        <div class="siteBody" style="max-height: 95%">
             <div class="row">
-                <div class="col-md-8" style="height:100%;">
-                    <div class="row contentCanvas">
-                        <div class="aboutPage pageContent" v-if="renderingAbout">
-                            <div>
-                                put about content here
-                            </div>
-                        </div>
-                        <div class="musicPage pageContent" v-if="renderingMusic">
-                            <div class="col-md-4 musicCol">
-                                <div class="row noMarginRow">
-                                    <div class="widget singlesFollow">
-                                        Singles
-                                    </div>
-                                </div>
-                                <div class="row noMarginRow">
-                                    <div class="widget singlesPlay"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 musicCol">
-                                <div class="row noMarginRow">
-                                    <div class="widget soulSherpaFollow">
-                                        Soul Sherpa
-                                    </div>
-                                </div>
-                                <div class="row noMarginRow">
-                                    <div class="widget soulSherpaPlay"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 musicCol">
-                                <div class="row noMarginRow">
-                                    <div class="widget fruitmouseFollow">
-                                        Fruitmouse
-                                    </div>
-                                    <div class="row noMarginRow">
-                                        <div class="widget fruitmousePlay"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="artPage pageContent" v-if="renderingArt">
-                            <div class="carouselContainer row">
-                                <div class="col-md-1">
-                                    <button class="btn carouselNav carouselBtn" v-on:click="previousImage"><span class="glyphicon glyphicon-chevron-left"></span></button>
-                                </div>
-                                <div class="col-md-10">
-                                    <img v-bind:src="bodyArtImages[selectedBodyArtIndex]" style="height: 100%; max-width: 100%;">
-                                </div>
-                                <div class="col-md-1">
-                                    <button class="btn carouselNav carouselBtn" v-on:click="nextImage"><span class="glyphicon glyphicon-chevron-right"></span></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dancePage pageContent" v-if="renderingDance">
-                            <div>
-                                put dancing page here
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row content-nav">
-                        <div class="col-md-1 contentTab" v-on:click="renderAbout">
-                            <div class="row">About</div>
-                        </div>
-                        <div class="col-md-1 contentTab" v-on:click="renderMusic">
-                            <div class="row">Music</div>
-                        </div>
-                        <div class="col-md-4 siteTitle">
-                            <div class="row">Inga Aleckson</div>
-                        </div>
-                        <div class="col-md-1 contentTab" v-on:click="renderArt">
-                            <div class="row">Art</div>
-                        </div>
-                        <div class="col-md-1 contentTab" v-on:click="renderDance">
-                            <div class="row">Dance</div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
 </div>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/ingaProfile.css">
+<link rel="stylesheet" href="../css/weddingSite.css">
 
 <!--script src="../js/vue.js"></script-->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="../js/ingaProfile.js"></script>
+<script src="../js/weddingSite.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
