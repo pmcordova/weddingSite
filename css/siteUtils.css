@@ -1,0 +1,25 @@
+.noMarginRow {
+    margin-right:0;
+    margin-left:0;
+    width: 100%;
+}
+
+.fullWidth {
+    width: 100%
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.flexContainer {
+    display: flex;
+}
+
+.itemsCenterAligned {
+    align-items: center;
+}
+
+.textCentered {
+    text-align: center;
+}

@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/siteUtils.css">
         <link rel="stylesheet" href="../css/weddingSite.css">
     </head>
     <body>
-            <div class="container body" id="app">
-                <div class="row navigator" style="max-height: 15%">
+            <div class="container body fullWidth fullHeight" id="app" v-bind:style="{backgroundImage: `url(${backgroundImage})`}">
+                <div class="row noMarginRow fullWidth flexContainer itemsCenterAligned textCentered navigator">
                     <!--div class="col nav-button" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
                     <div class="col nav-button" style="width:35%"></div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
@@ -16,16 +17,22 @@
                     <div class="col nav-button" style="width:10%" v-on:click="renderRegistryPage">Registry</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderRsvpPage">RSVP</div-->
                     <div class="col nav-button" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
-                    <div class="col nav-button" style="width:35%"></div>
+                    <div class="col nav-button" style="width:45%"></div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderReceptionPage">Reception</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderRegistryPage">Registry</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderRsvpPage">RSVP</div>
                 </div>
-                <div class="content" style="max-height: 95%">
+                <div class="content fullWidth flexContainer">
                     <div class="row noMarginRow">
-                        <div class="col page" v-if="currentPage==='HOME'">
-                            Home 
+                        <div class="col flexContainer fullWidth fullHeight textCentered homePage" v-if="currentPage==='HOME'">
+                            <div class="fullWidth homePageTitle">
+                                Cordova-Holtkamp Wedding
+                            </div>
+                            <div class="homePageBody">
+                                <div>June 4, 2022</div>
+                                <div>Topeka, Kansas</div>
+                            </div>
                         </div>
                         <div class="col page" v-if="currentPage==='CEREMONY'">
                             Ceremony
