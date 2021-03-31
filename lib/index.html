@@ -9,42 +9,37 @@
     </head>
     <body>
             <div class="container body fullWidth fullHeight" id="app" v-bind:style="{backgroundImage: `url(${backgroundImage})`}">
-                <div class="row noMarginRow fullWidth flexContainer itemsCenterAligned textCentered navigator">
+                <div class="row noMarginRow fullWidth flexContainer itemsCenterAligned navigator">
                     <!--div class="col nav-button" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
                     <div class="col nav-button" style="width:35%"></div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderReceptionPage">Reception</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderRegistryPage">Registry</div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderRsvpPage">RSVP</div-->
-                    <div class="col nav-button" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
-                    <div class="col nav-button" style="width:45%"></div>
-                    <div class="col nav-button" style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
-                    <div class="col nav-button" style="width:10%" v-on:click="renderReceptionPage">Reception</div>
-                    <div class="col nav-button" style="width:10%" v-on:click="renderRegistryPage">Registry</div>
-                    <div class="col nav-button" style="width:10%" v-on:click="renderRsvpPage">RSVP</div>
+                    <div class="fullHeight flexContainer justifyContentCenter itemsCenterAligned" v-bind:class="{'active-nav-button':currentPage==='HOME'}" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
+                    <div class="fullHeight"  style="width:45%"></div>
+                    <div class="fullHeight flexContainer justifyContentCenter itemsCenterAligned" v-bind:class="{'active-nav-button':currentPage==='CEREMONY'}"  style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
+                    <div class="fullHeight flexContainer justifyContentCenter itemsCenterAligned" v-bind:class="{'active-nav-button':currentPage==='RECEPTION'}"  style="width:10%" v-on:click="renderReceptionPage">Reception</div>
+                    <div class="fullHeight flexContainer justifyContentCenter itemsCenterAligned" v-bind:class="{'active-nav-button':currentPage==='REGISTRY'}"  style="width:10%" v-on:click="renderRegistryPage">Registry</div>
+                    <div class="fullHeight flexContainer justifyContentCenter itemsCenterAligned" v-bind:class="{'active-nav-button':currentPage==='RSVP'}"  style="width:10%" v-on:click="renderRsvpPage">RSVP</div>
                 </div>
                 <div class="content fullWidth flexContainer">
                     <div class="row noMarginRow">
-                        <div class="col flexContainer fullWidth fullHeight textCentered homePage" v-if="currentPage==='HOME'">
-                            <div class="fullWidth homePageTitle">
-                                Cordova-Holtkamp Wedding
+                        <div class="flexContainer fullWidth fullHeight textCentered homePage" v-if="currentPage==='HOME'">
+                            <div class="fullWidth flexContainer justifyContentCenter homePageTitle">
+                                Join us and Celebrate our Wedding
                             </div>
-                            <div class="homePageBody">
-                                <div>June 4, 2022</div>
-                                <div>Topeka, Kansas</div>
+                            <div class="flexContainer homePageBody">
+                                <div>June 4, 2022 | Topeka, Kansas</div>
                             </div>
                         </div>
                         <div class="col page" v-if="currentPage==='CEREMONY'">
-                            Ceremony
                         </div>
                         <div class="col page" v-if="currentPage==='RECEPTION'">
-                            Reception
                         </div>
                         <div class="col page" v-if="currentPage==='REGISTRY'">
-                            Registry
                         </div>
                         <div class="col page" v-if="currentPage==='RSVP'">
-                            RSVP
                         </div>
                     </div>
                 </div>

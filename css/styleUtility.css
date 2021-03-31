@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+.justifyContentCenter {
+    justify-content: center;
+}
+
 .textCentered {
     text-align: center;
 }
