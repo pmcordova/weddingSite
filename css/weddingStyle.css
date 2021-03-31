@@ -3,7 +3,6 @@ html, body {
 }
 
 .body {
-    /*background-image: url(../img/home_background.png);*/
     background-size: cover;
     color: white;
     min-height:100%;
