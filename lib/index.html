@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="../css/weddingStyle.css">
     </head>
     <body>
-            <div class="container body fullWidth fullHeight" id="app" v-bind:style="{backgroundImage: `url(${backgroundImage})`}">
-                <div class="row noMarginRow fullWidth flexContainer itemsCenterAligned navigator">
+            <div class="container-fluid body fullWidth fullHeight" id="app" v-bind:style="{backgroundImage: `url(${backgroundImage})`}">
+                <div class="row flexContainer itemsCenterAligned navigator">
                     <!--div class="col nav-button" style="width:15%" v-on:click="renderHomePage">Philip and Jessica</div>
                     <div class="col nav-button" style="width:35%"></div>
                     <div class="col nav-button" style="width:10%" v-on:click="renderCeremonyPage">Ceremony</div>
@@ -33,13 +33,17 @@
                                 <div>June 4, 2022 | Topeka, Kansas</div>
                             </div>
                         </div>
-                        <div class="col page" v-if="currentPage==='CEREMONY'">
+                        <div class="fullWidth fullHeight flexContainer ceremonyPage" v-if="currentPage==='CEREMONY'">
+                            <construction-notice></construction-notice>
                         </div>
-                        <div class="col page" v-if="currentPage==='RECEPTION'">
+                        <div class="fullWidth fullHeight receptionPage" v-if="currentPage==='RECEPTION'">
+                            <construction-notice></construction-notice>
                         </div>
-                        <div class="col page" v-if="currentPage==='REGISTRY'">
+                        <div class="fullWidth fullHeight registryPage" v-if="currentPage==='REGISTRY'">
+                            <construction-notice></construction-notice>
                         </div>
-                        <div class="col page" v-if="currentPage==='RSVP'">
+                        <div class="fullWidth fullHeight rsvpPage" v-if="currentPage==='RSVP'">
+                            <construction-notice></construction-notice>
                         </div>
                     </div>
                 </div>

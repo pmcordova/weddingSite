@@ -27,3 +27,11 @@
 .textCentered {
     text-align: center;
 }
+
+.scrollBar {
+    overflow-y: scroll;
+}
+
+.padded {
+    padding: 0px 15px;
+}
